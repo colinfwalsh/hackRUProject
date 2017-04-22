@@ -16,7 +16,8 @@ class ClockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.updateClock()
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateClock), userInfo: nil, repeats: true)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -31,7 +32,7 @@ class ClockViewController: UIViewController {
         
         self.clockDisplay.text = stringDisplay
         
-        self.perform(#selector(self.updateClock), with: self, afterDelay: 1.0)
+        
         
     }
     

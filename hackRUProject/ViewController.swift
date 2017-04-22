@@ -31,8 +31,11 @@ class ViewController: UIViewController {
         self.displayLink.add(to: RunLoop.main, forMode: RunLoopMode.commonModes)
         
         // Initial timestamp //
-        self.lastDisplayLinkTimeStamp = self.displayLink.timestamp
-    }
+        self.lastDisplayLinkTimeStamp = 20
+        
+        
+        refresh()
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,17 +50,33 @@ class ViewController: UIViewController {
         
     }
     
+    func refresh() {
+        let colors = Colors()
+        view.backgroundColor = UIColor.clear
+        let backgroundLayer = colors.gl
+        backgroundLayer?.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer!, at: 0)
+    }
     
     
     func displayLinkUpdate(sender: CADisplayLink) {
         // Update running tally //
-        self.lastDisplayLinkTimeStamp = self.lastDisplayLinkTimeStamp + self.displayLink.duration
+        self.lastDisplayLinkTimeStamp = self.lastDisplayLinkTimeStamp - self.displayLink.duration
         
         // Format the running tally to display on the last two significant digits //
         let formattedString:String = String(format: "%0.2f", self.lastDisplayLinkTimeStamp)
         
         // Display the formatted running tally //
         self.numDisplay.text = formattedString
+        
+        print("firing")
+        
+        if (self.lastDisplayLinkTimeStamp <= 0.00) {
+            self.displayLink.isPaused = !(self.displayLink.isPaused)
+            print("done")
+        }
+        
+        
     }
     
     

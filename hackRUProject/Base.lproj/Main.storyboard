@@ -33,25 +33,37 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-11-l3g">
                                 <rect key="frame" x="170.5" y="381" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="0.38307667550000002" blue="0.51188986960000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gem-fP-83t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJw-4I-H03">
                                 <rect key="frame" x="167.5" y="587" width="39" height="30"/>
-                                <state key="normal" title="Clock"/>
+                                <state key="normal" title="Clock">
+                                    <color key="titleColor" red="1" green="0.38307667550000002" blue="0.51188986960000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="NlI-Fq-n3D" kind="show" id="uCx-2l-UIa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nap Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cog-bV-6AY">
+                                <rect key="frame" x="148" y="267" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Uhp-Yb-1oi" firstAttribute="top" secondItem="cog-bV-6AY" secondAttribute="bottom" constant="8" id="GsY-ed-GwQ"/>
                             <constraint firstItem="GJw-4I-H03" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TCS-ba-G13"/>
                             <constraint firstItem="P3g-11-l3g" firstAttribute="centerX" secondItem="Uhp-Yb-1oi" secondAttribute="centerX" id="Xe6-yD-Kfl"/>
                             <constraint firstItem="P3g-11-l3g" firstAttribute="top" secondItem="Uhp-Yb-1oi" secondAttribute="bottom" constant="10" id="Ye9-qK-CTZ"/>
                             <constraint firstItem="Uhp-Yb-1oi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZrM-NE-id5"/>
+                            <constraint firstItem="cog-bV-6AY" firstAttribute="centerX" secondItem="Uhp-Yb-1oi" secondAttribute="centerX" id="dHm-yP-zm2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GJw-4I-H03" secondAttribute="bottom" constant="50" id="eIF-xq-Fqd"/>
                             <constraint firstItem="Uhp-Yb-1oi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="igd-ct-eb0"/>
                         </constraints>
@@ -77,7 +89,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQG-6I-w8W">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--:-- --" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQG-6I-w8W">
                                 <rect key="frame" x="37.5" y="271" width="300" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Tjv-AM-Iim"/>
@@ -89,7 +101,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-E4-RpQ">
                                 <rect key="frame" x="149.5" y="587" width="75" height="30"/>
-                                <state key="normal" title="Table View"/>
+                                <state key="normal" title="Table View">
+                                    <color key="titleColor" red="1" green="0.38307667550000002" blue="0.51188986960000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Prl-i9-SZB" kind="show" id="dQB-SI-9Vs"/>
                                 </connections>
