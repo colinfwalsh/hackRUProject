@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6s0-Yg-FpB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hackRUProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,105 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhp-Yb-1oi">
+                                <rect key="frame" x="115" y="296" width="145" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="f0V-rL-Hj3"/>
+                                    <constraint firstAttribute="height" constant="75" id="nUq-Ph-RLI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-11-l3g">
+                                <rect key="frame" x="170.5" y="381" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gem-fP-83t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJw-4I-H03">
+                                <rect key="frame" x="167.5" y="587" width="39" height="30"/>
+                                <state key="normal" title="Clock"/>
+                                <connections>
+                                    <segue destination="NlI-Fq-n3D" kind="show" id="uCx-2l-UIa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GJw-4I-H03" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TCS-ba-G13"/>
+                            <constraint firstItem="P3g-11-l3g" firstAttribute="centerX" secondItem="Uhp-Yb-1oi" secondAttribute="centerX" id="Xe6-yD-Kfl"/>
+                            <constraint firstItem="P3g-11-l3g" firstAttribute="top" secondItem="Uhp-Yb-1oi" secondAttribute="bottom" constant="10" id="Ye9-qK-CTZ"/>
+                            <constraint firstItem="Uhp-Yb-1oi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZrM-NE-id5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GJw-4I-H03" secondAttribute="bottom" constant="50" id="eIF-xq-Fqd"/>
+                            <constraint firstItem="Uhp-Yb-1oi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="igd-ct-eb0"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="F4f-nC-Xx1"/>
+                    <connections>
+                        <outlet property="numDisplay" destination="Uhp-Yb-1oi" id="hpm-DR-4PC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Clock View Controller-->
+        <scene sceneID="jq3-9o-eeU">
+            <objects>
+                <viewController id="NlI-Fq-n3D" customClass="ClockViewController" customModule="hackRUProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zlo-IS-0AY"/>
+                        <viewControllerLayoutGuide type="bottom" id="CMg-tw-amw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7nl-zs-qcw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQG-6I-w8W">
+                                <rect key="frame" x="37.5" y="271" width="300" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Tjv-AM-Iim"/>
+                                    <constraint firstAttribute="height" constant="125" id="rzX-IL-9p1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eQG-6I-w8W" firstAttribute="centerY" secondItem="7nl-zs-qcw" secondAttribute="centerY" id="9wN-pE-UbN"/>
+                            <constraint firstItem="eQG-6I-w8W" firstAttribute="centerX" secondItem="7nl-zs-qcw" secondAttribute="centerX" id="Bsc-Mh-UuP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clockDisplay" destination="eQG-6I-w8W" id="Or9-oq-lCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Wm-g7-GRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823.2" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u05-aB-8eN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6s0-Yg-FpB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TIR-8Z-hnE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rAp-zA-q5B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEQ-SG-ts3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
