@@ -87,11 +87,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-E4-RpQ">
+                                <rect key="frame" x="149.5" y="587" width="75" height="30"/>
+                                <state key="normal" title="Table View"/>
+                                <connections>
+                                    <segue destination="Prl-i9-SZB" kind="show" id="dQB-SI-9Vs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CMg-tw-amw" firstAttribute="top" secondItem="Mdv-E4-RpQ" secondAttribute="bottom" constant="50" id="0U7-wh-WXh"/>
                             <constraint firstItem="eQG-6I-w8W" firstAttribute="centerY" secondItem="7nl-zs-qcw" secondAttribute="centerY" id="9wN-pE-UbN"/>
                             <constraint firstItem="eQG-6I-w8W" firstAttribute="centerX" secondItem="7nl-zs-qcw" secondAttribute="centerX" id="Bsc-Mh-UuP"/>
+                            <constraint firstItem="Mdv-E4-RpQ" firstAttribute="centerX" secondItem="7nl-zs-qcw" secondAttribute="centerX" id="N8g-6J-4hs"/>
                         </constraints>
                     </view>
                     <connections>
@@ -101,6 +110,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wm-g7-GRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823.2" y="136.28185907046478"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="GtT-T7-L9f">
+            <objects>
+                <tableViewController id="Prl-i9-SZB" customClass="AlarmSetTableViewController" customModule="hackRUProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q2q-vj-4Fb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="defaultCell" id="QKh-cC-RbT">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QKh-cC-RbT" id="fuq-nf-Hwy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Prl-i9-SZB" id="ixa-ak-pwf"/>
+                            <outlet property="delegate" destination="Prl-i9-SZB" id="A3M-1e-22i"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="vIU-Xs-HC2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gau-mI-Z40">
+                            <connections>
+                                <action selector="addCellTapped:" destination="Prl-i9-SZB" id="ler-9m-3sD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addCell" destination="gau-mI-Z40" id="015-vQ-StA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhs-F7-xe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2565" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u05-aB-8eN">

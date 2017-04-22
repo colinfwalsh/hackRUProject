@@ -13,6 +13,7 @@
 		BD9DFF561EABAE6400BD8B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9DFF551EABAE6400BD8B23 /* Assets.xcassets */; };
 		BD9DFF591EABAE6400BD8B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9DFF571EABAE6400BD8B23 /* LaunchScreen.storyboard */; };
 		BD9DFF611EABE2A400BD8B23 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DFF601EABE2A400BD8B23 /* ClockViewController.swift */; };
+		BD9DFF631EABFD4B00BD8B23 /* AlarmSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DFF621EABFD4B00BD8B23 /* AlarmSetTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BD9DFF581EABAE6400BD8B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD9DFF5A1EABAE6400BD8B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD9DFF601EABE2A400BD8B23 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		BD9DFF621EABFD4B00BD8B23 /* AlarmSetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSetTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BD9DFF4E1EABAE6400BD8B23 /* AppDelegate.swift */,
 				BD9DFF501EABAE6400BD8B23 /* ViewController.swift */,
 				BD9DFF601EABE2A400BD8B23 /* ClockViewController.swift */,
+				BD9DFF621EABFD4B00BD8B23 /* AlarmSetTableViewController.swift */,
 				BD9DFF521EABAE6400BD8B23 /* Main.storyboard */,
 				BD9DFF551EABAE6400BD8B23 /* Assets.xcassets */,
 				BD9DFF571EABAE6400BD8B23 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9DFF631EABFD4B00BD8B23 /* AlarmSetTableViewController.swift in Sources */,
 				BD9DFF611EABE2A400BD8B23 /* ClockViewController.swift in Sources */,
 				BD9DFF511EABAE6400BD8B23 /* ViewController.swift in Sources */,
 				BD9DFF4F1EABAE6400BD8B23 /* AppDelegate.swift in Sources */,
