@@ -1,0 +1,12 @@
+PODS:
+  - SlideMenuControllerSwift (3.0.0)
+
+DEPENDENCIES:
+  - SlideMenuControllerSwift
+
+SPEC CHECKSUMS:
+  SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
+
+PODFILE CHECKSUM: 2382d0748f3ccf1b4c0c14707f58dd49694be77c
+
+COCOAPODS: 1.0.1
