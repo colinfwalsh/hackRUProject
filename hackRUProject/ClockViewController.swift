@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ClockViewController: UIViewController {
 
@@ -20,12 +21,18 @@ class ClockViewController: UIViewController {
     }
 
     func updateClock() {
+    
         let clockFormat = DateFormatter()
-        clockFormat.setLocalizedDateFormatFromTemplate("hh:mm:ss a")
         
-        self.clockDisplay.text = clockFormat.string(from: Date())
+        clockFormat.dateFormat = "hh:mm:ss a"
         
-        self.perform(#selector(self.updateClock), with: self)
+        let stringDisplay = clockFormat.string(from: Date())
+        
+        
+        self.clockDisplay.text = stringDisplay
+        
+        self.perform(#selector(self.updateClock), with: self, afterDelay: 1.0)
+        
     }
     
     override func didReceiveMemoryWarning() {
