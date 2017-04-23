@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
     
     
-    func displayLinkUpdate(sender: CADisplayLink) {
+    func displayLinkUpdate(_ sender: CADisplayLink) {
         // Update running tally //
         self.lastDisplayLinkTimeStamp = self.lastDisplayLinkTimeStamp - self.displayLink.duration
         

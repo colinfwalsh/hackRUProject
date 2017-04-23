@@ -125,7 +125,7 @@
             </objects>
             <point key="canvasLocation" x="1823.2" y="136.28185907046478"/>
         </scene>
-        <!--Title-->
+        <!--Set Alarms-->
         <scene sceneID="GtT-T7-L9f">
             <objects>
                 <tableViewController id="Prl-i9-SZB" customClass="AlarmSetTableViewController" customModule="hackRUProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,7 +149,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="vIU-Xs-HC2">
+                    <navigationItem key="navigationItem" title="Set Alarms" id="vIU-Xs-HC2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gau-mI-Z40">
                             <connections>
                                 <action selector="addCellTapped:" destination="Prl-i9-SZB" id="ler-9m-3sD"/>

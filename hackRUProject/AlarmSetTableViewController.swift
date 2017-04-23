@@ -12,7 +12,7 @@ class AlarmSetTableViewController: UITableViewController {
     
     @IBOutlet var addCell: UIBarButtonItem!
     
-    var alarmArray = ["Alarm 1", "Alarm 2", "Alarm 3"]
+    var alarmStringArray = ["Alarm 1", "Alarm 2", "Alarm 3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +22,10 @@ class AlarmSetTableViewController: UITableViewController {
 
     @IBAction func addCellTapped(_ sender: Any) {
         
-        alarmArray.append("NEW ALARM")
+        alarmStringArray.append("NEW ALARM")
         
         self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [IndexPath(row: alarmArray.count-1, section: 0)], with: .automatic)
+        self.tableView.insertRows(at: [IndexPath(row: alarmStringArray.count-1, section: 0)], with: .automatic)
         self.tableView.endUpdates()
     }
     override func didReceiveMemoryWarning() {
@@ -42,14 +42,14 @@ class AlarmSetTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return alarmArray.count
+        return alarmStringArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
 
-        cell.textLabel?.text = alarmArray[indexPath.row]
+        cell.textLabel?.text = alarmStringArray[indexPath.row]
 
         return cell
     }
@@ -68,7 +68,7 @@ class AlarmSetTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            self.alarmArray.remove(at: indexPath.row)
+            self.alarmStringArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
         } else if editingStyle == .insert {
