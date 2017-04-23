@@ -13,6 +13,8 @@ class AlarmSetTableViewController: UITableViewController {
     @IBOutlet var addCell: UIBarButtonItem!
     
     var alarmStringArray = ["Alarm 1", "Alarm 2", "Alarm 3"]
+    
+    var alarmArray: [Date] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

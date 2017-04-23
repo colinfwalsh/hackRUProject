@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         // Initial timestamp //
         self.lastDisplayLinkTimeStamp = 20
         
-        
         refresh()
         }
 
