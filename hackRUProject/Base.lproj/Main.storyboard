@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -153,6 +154,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gau-mI-Z40">
                             <connections>
                                 <action selector="addCellTapped:" destination="Prl-i9-SZB" id="ler-9m-3sD"/>
+                                <segue destination="JYs-k5-vg3" kind="show" id="Aqn-1q-IQy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -164,6 +166,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhs-F7-xe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2565" y="139"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="Xaw-cI-uao">
+            <objects>
+                <viewController id="JYs-k5-vg3" customClass="DatePickerViewController" customModule="hackRUProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HfO-Aj-gft"/>
+                        <viewControllerLayoutGuide type="bottom" id="qUt-oR-rYd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vgM-Ab-I1a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dce-oY-mCz">
+                                <rect key="frame" x="27.5" y="142" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="514613729.889296">
+                                    <!--2017-04-23 04:15:29 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8r-bp-8fl">
+                                <rect key="frame" x="162.5" y="366" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="JYs-k5-vg3" eventType="touchUpInside" id="toc-FO-dl8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dce-oY-mCz" firstAttribute="centerX" secondItem="vgM-Ab-I1a" secondAttribute="centerX" id="G7q-43-f6k"/>
+                            <constraint firstItem="j8r-bp-8fl" firstAttribute="centerX" secondItem="dce-oY-mCz" secondAttribute="centerX" id="RFx-JW-rg9"/>
+                            <constraint firstItem="dce-oY-mCz" firstAttribute="centerY" secondItem="vgM-Ab-I1a" secondAttribute="centerY" multiplier="0.75" id="fna-H9-qs6"/>
+                            <constraint firstItem="j8r-bp-8fl" firstAttribute="top" secondItem="dce-oY-mCz" secondAttribute="bottom" constant="8" id="j3S-ZY-olR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="dce-oY-mCz" id="cAp-ir-krb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZI-dp-U51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3309.5999999999999" y="143.47826086956522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u05-aB-8eN">

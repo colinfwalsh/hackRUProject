@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5BC23B0826C11A8B62536EE7 /* Pods_hackRUProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0364FCEE1B80E80D68843E72 /* Pods_hackRUProject.framework */; };
+		BD3601881EAC632100C33DEB /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3601871EAC632100C33DEB /* DatePickerViewController.swift */; };
+		BD36018A1EAC6C2700C33DEB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3601891EAC6C2700C33DEB /* CoreDataManager.swift */; };
 		BD9DFF4F1EABAE6400BD8B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DFF4E1EABAE6400BD8B23 /* AppDelegate.swift */; };
 		BD9DFF511EABAE6400BD8B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9DFF501EABAE6400BD8B23 /* ViewController.swift */; };
 		BD9DFF541EABAE6400BD8B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9DFF521EABAE6400BD8B23 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		0364FCEE1B80E80D68843E72 /* Pods_hackRUProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackRUProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2479F557A94C99CAAAAAB551 /* Pods-hackRUProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackRUProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackRUProject/Pods-hackRUProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8989DBF61FD61FEBE0EE8E08 /* Pods-hackRUProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackRUProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackRUProject/Pods-hackRUProject.release.xcconfig"; sourceTree = "<group>"; };
+		BD3601871EAC632100C33DEB /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		BD3601891EAC6C2700C33DEB /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BD9DFF4B1EABAE6400BD8B23 /* hackRUProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackRUProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9DFF4E1EABAE6400BD8B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9DFF501EABAE6400BD8B23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +85,9 @@
 				BD9DFF641EAC14F000BD8B23 /* Colors.swift */,
 				BD9DFF501EABAE6400BD8B23 /* ViewController.swift */,
 				BD9DFF601EABE2A400BD8B23 /* ClockViewController.swift */,
+				BD3601891EAC6C2700C33DEB /* CoreDataManager.swift */,
 				BD9DFF621EABFD4B00BD8B23 /* AlarmSetTableViewController.swift */,
+				BD3601871EAC632100C33DEB /* DatePickerViewController.swift */,
 				BD9DFF521EABAE6400BD8B23 /* Main.storyboard */,
 				BD9DFF6C1EAC25B100BD8B23 /* hackRUProject.xcdatamodeld */,
 				BD9DFF551EABAE6400BD8B23 /* Assets.xcassets */,
@@ -227,9 +233,11 @@
 			files = (
 				BD9DFF631EABFD4B00BD8B23 /* AlarmSetTableViewController.swift in Sources */,
 				BD9DFF651EAC14F000BD8B23 /* Colors.swift in Sources */,
+				BD3601881EAC632100C33DEB /* DatePickerViewController.swift in Sources */,
 				BD9DFF611EABE2A400BD8B23 /* ClockViewController.swift in Sources */,
 				BD9DFF6E1EAC25B100BD8B23 /* hackRUProject.xcdatamodeld in Sources */,
 				BD9DFF511EABAE6400BD8B23 /* ViewController.swift in Sources */,
+				BD36018A1EAC6C2700C33DEB /* CoreDataManager.swift in Sources */,
 				BD9DFF4F1EABAE6400BD8B23 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,29 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 class AlarmSetTableViewController: UITableViewController {
     
-    @IBOutlet var addCell: UIBarButtonItem!
+    @IBOutlet var addCvar: UIBarButtonItem!
     
-    var alarmStringArray = ["Alarm 1", "Alarm 2", "Alarm 3"]
+    let coreDm = CoreDataManager.sharedInstance
     
-    var alarmArray: [Date] = []
+    //var alarmStringArray = ["Alarm 1", "Alarm 2", "Alarm 3"]
+    
+    //var alarmArray: [Date] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
 
     }
 
     @IBAction func addCellTapped(_ sender: Any) {
         
-        alarmStringArray.append("NEW ALARM")
-        
         self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [IndexPath(row: alarmStringArray.count-1, section: 0)], with: .automatic)
+        self.tableView.insertRows(at: [IndexPath(row: coreDm.alarmManagedObjects.count-1, section: 0)], with: .automatic)
         self.tableView.endUpdates()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,14 +47,16 @@ class AlarmSetTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return alarmStringArray.count
+        return coreDm.alarmManagedObjects.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
-
-        cell.textLabel?.text = alarmStringArray[indexPath.row]
+        
+        let alarmObject = coreDm.alarmManagedObjects[indexPath.row]
+        
+        cell.textLabel?.text = alarmObject.value(forKey: "alarmString") as? String
 
         return cell
     }
@@ -70,7 +75,7 @@ class AlarmSetTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            self.alarmStringArray.remove(at: indexPath.row)
+            self.coreDm.alarmManagedObjects.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
         } else if editingStyle == .insert {
